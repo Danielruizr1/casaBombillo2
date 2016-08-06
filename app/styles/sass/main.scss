@@ -1,0 +1,96 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  padding-bottom: 20px;
+}
+
+/* ----CUSTOM CASABOMBILLO----  */
+
+.container-fluid {
+  &.main {
+    padding: 0px;
+  }
+  .headerContainer {
+    width: 100%;
+    background-color: #8CD156;
+    height: 250px;
+    position: relative;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----CUSTOM CASABOMBILLO RESPONSIVE----  */
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+
+  nav-bar {
+
+    .container.main {
+      max-width: 800px;
+      position: relative;
+      top:200px;
+      margin: 0px auto;
+
+      .navbar {
+        margin-bottom: 0px;
+
+      }
+
+    }
+
+  }
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
