@@ -1,1 +1,1 @@
-angular.module('casabombillo', []);
+angular.module('casabombillo', ['ngCart']);

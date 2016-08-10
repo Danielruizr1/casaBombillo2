@@ -1,4 +1,4 @@
-angular.module('casabombillo', []);
+angular.module('casabombillo', ['ngCart']);
 angular.module('casabombillo')
 	.directive('navBar', function  () {
 		return {
@@ -7,4 +7,11 @@ angular.module('casabombillo')
 
 		};
 		
+	})
+	.directive('products', function() {
+		return {
+			restrict: 'E',
+			templateUrl: 'views/products.html'
+		};
+
 	});

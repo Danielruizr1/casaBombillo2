@@ -217,7 +217,7 @@ gulp.task('js:server', function () {
 gulp.task('templates', function (){
   gulp.src('app/views/*.html')
     .pipe($.htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest('build/app/templates'));
+    .pipe(gulp.dest('build/app/views'));
   gulp.src('app/index.html')
     .pipe($.usemin({
       css: [ $.rev(), $.minifyCss() ],

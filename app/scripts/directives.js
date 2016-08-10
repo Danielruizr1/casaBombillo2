@@ -6,4 +6,11 @@ angular.module('casabombillo')
 
 		};
 		
+	})
+	.directive('products', function() {
+		return {
+			restrict: 'E',
+			templateUrl: 'views/products.html'
+		};
+
 	});
