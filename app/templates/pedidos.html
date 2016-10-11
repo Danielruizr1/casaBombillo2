@@ -1,0 +1,48 @@
+<div class="col-sm-12">
+	<div class="row">
+		<div class="col-sm-3">
+			<a href="/#/defaultt">Voler</a>
+		</div>
+		<div class="col-sm-3">
+			<a href="/#/perfil">Perfil</a>
+		</div>
+		<div class="col-sm-3">
+			<a href="/#/pedidos">Pedidos</a>
+		</div>
+		<div class="col-sm-3">
+			<a href="/#/cotizaciones">Cotizaciones</a>
+		</div>
+
+
+	</div>
+	<div class="row" >
+		<table class="table table-hover">
+		  <thead>
+			  	<tr>
+				  	<th>#</th>
+				  	<th>Productos</th>
+				  	<th>Valor</th>
+				  	<th>Fecha</th>	
+				  	<th>Estado</th>
+			  	</tr>
+		  </thead>
+		  <tbody>
+			  <tr ng-repeat="pedido in controller.pedidos">
+				<td>{[pedido.id]}</td>
+				<td>{[pedido.productos]}</td>
+				<td>{[pedido.precio | currency:"COP: "]}</td>
+				<td>{[pedido.fecha | date:'longDate']}</td>
+				<td>{[pedido.estado]}</td>	  	
+			  </tr>
+		  	
+		  </tbody>
+		</table>
+
+	</div>
+
+
+
+
+
+
+</div>

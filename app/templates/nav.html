@@ -1,4 +1,36 @@
+ <div class="headerContainer">
+      <div class="buttonsContainer">
+        <div class="container">
+          <div class="">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a ng-click="controller.login()" ng-show="!isAuthenticated">Iniciar Session</a>
+                  <a ng-click="controller.showProfile()" ng-show="isAuthenticated"> Bienvenido! {[controller.user.name || controller.user.email]}</a>
+
+                </li>
+                <li>
+                    <a ng-click="controller.logout()" ng-show="isAuthenticated">Salir</a>                  
+                </li>
+                  <li>
+                    <a href="/#/cart">
+                      <ngcart-summary class="cbCart"></ngcart-summary>
+                    </a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+     
+
+
+
+
+
 <div class="container main">
+
+
+
+
 
         <nav class="navbar navbar-inverse navbar-static-top">
           <div class="container">
@@ -12,9 +44,10 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Electricos</a></li>
-                <li><a href="#about">Hidrosanitario</a></li>
-                <li><a href="#contact">Iluminación</a></li>
+                <li ng-repeat="categoria in categorias">
+                <a ng-click="controller.setCategoria(categoria)">{[categoria.nombre]}</a>
+                </li>
+                
                 <!--<li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -28,14 +61,11 @@
                   </ul>
                 </li>-->
                 <li> 
-                  <div class="form-group">
-                      <div class="input-group">
+                  
+                      
                         <input type="text" placeholder="Buscar" class="form-control">
-                        <span class="input-group-btn">
-                          <button class="btn btn-default" type="button">Buscar!</button>
-                        </span>
-                      </div>
-                  </div>
+
+                  
                 </li>
               </ul>
             </div>
@@ -43,3 +73,5 @@
         </nav>
 
       </div>
+
+   </div>

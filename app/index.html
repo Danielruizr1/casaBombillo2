@@ -11,55 +11,25 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/ez-plus/css/jquery.ez-plus.css" />
     <!-- endbower -->
     <!-- endbuild -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- build:css /styles/main.css -->
     <link rel="stylesheet" href="styles/css/main.css">
     <!-- endbuild -->
     
   </head>
-  <body ng-app="casabombillo">
+  <body ng-app="casabombillo" ng-controller="mainController as controller">
   <div class="container-fluid main">
-   <div class="headerContainer">
-     <nav-bar></nav-bar>
-
-   </div>
+    <nav-bar></nav-bar>
+  
    <div class="container mainBody">
-     
-       <div class="jumbotron main">
-        <div class="container">
-         
-        </div>
-      </div>
-    <div class="container-fluid">
 
-      <div class="col-sm-9">
-        
-      </div>
-
-      <div class="col-sm-3">
-        <div class="row padTop"> 
-          <div class="col-sm-12 sideHolder">
-            <img class="sideImgs" src="http://res.cloudinary.com/ruizoft/image/upload/v1470702790/casaBombillo/banner_cotizador.jpg">
-          </div>
-        </div>
-
-        <div class="row padTop">
-          <div class="col-sm-12 sideHolder">
-            <img class="sideImgs" src="http://res.cloudinary.com/ruizoft/image/upload/v1470702789/casaBombillo/boton_asesoria.jpg">
-          </div>
-          <div class="col-sm-12 sideHolder">
-            <img class="sideImgs" src="http://res.cloudinary.com/ruizoft/image/upload/v1470702789/casaBombillo/boton_catalogo.jpg">
-          </div>
-          <div class="col-sm-12 sideHolder">
-            <img class="sideImgs" src="http://res.cloudinary.com/ruizoft/image/upload/v1470702789/casaBombillo/boton_certificados.jpg">
-          </div>
-        </div>
-
-      </div>
-      
-    </div>
+      <ui-view class="view"></ui-view> 
+       
 
 
 
@@ -77,8 +47,17 @@
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="/bower_components/ngCart/dist/ngCart.js"></script>
+    <script src="/bower_components/auth0-lock/build/lock.js"></script>
+    <script src="/bower_components/angular-lock/angular-lock.js"></script>
+    <script src="/bower_components/angular-jwt/dist/angular-jwt.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/bower_components/ez-plus/src/jquery.ez-plus.js"></script>
+    <script src="/bower_components/angular-ez-plus/js/angular-ezplus.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <script src="/bower_components/idb/lib/idb.js"></script>
+    <script src="/bower_components/jsPDF/dist/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/2.0.16/jspdf.plugin.autotable.js"></script>
     
     <!-- build:js2 /scripts/main.js -->
     <script src="scripts/final/main.js"></script>
@@ -86,5 +65,3 @@
   </body>
 </html>
 
- <!--<?php bloginfo('template_directory');?>
-  -->

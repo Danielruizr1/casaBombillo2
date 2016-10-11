@@ -1,0 +1,25 @@
+<div class="col-sm-4 productCont" >
+	<div class="row imgRow" ng-click="viewProduct(podruct)">
+		<div class="col-sm-8 col-sm-offset-2">
+			<img class="productImg" ng-src="http://localhost/{[product.image || '/storagee/public/galery/defaultP.jpg']}" ng-click="viewProduct(podruct)">
+
+		</div>
+	</div>
+	<div class="row desRow">
+		<div class="col-sm-12">
+			<h3>{[product.nombre]}</h3>
+
+			<p class="productDesc">{[product.precio | currency:"COP "]}</p>
+
+		</div>
+		
+	</div>
+	<div class="row buttonRow">
+		<div class="col-sm-12">
+			<ngcart-addtocart id="{{ product.id }}" name="{{ product.nombre }}" price="{{ product.precio }}" quantity="1" quantity-max="30" data="product">Agregar</ngcart-addtocart>
+
+		</div>
+		
+	</div>
+
+</div>

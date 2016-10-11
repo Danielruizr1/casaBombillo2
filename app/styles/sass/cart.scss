@@ -1,0 +1,36 @@
+.cartContainer {
+	padding:20px 10px;	
+	.cartTable {
+		margin-top:10px;
+		border-left:2px solid #E1E1E1;
+		border-right:2px solid #E1E1E1;
+		th {
+			background-color: #E1E1E1;
+
+		}
+		.cartImg {
+			width:100px;
+		}
+
+
+
+		.priceBox {
+			border-left:2px solid #BFBFBF;
+			border-right:2px solid #BFBFBF;
+		}
+
+		.totalBox {
+			background-color:#BFBFBF;
+		}
+	}
+
+	.btn-danger {
+		border-radius:0px;
+		&.dangerCustom {
+			background-color:#fff;
+			color:#d43f3a;
+		}
+	}
+
+
+}

@@ -1,0 +1,93 @@
+<div class="container-fluid viewProduct">
+	<div class="col-sm-12">
+		<div class="row breadCrumbs">
+			<h4><a href="/#/defaultt">Principal -> </a> {[activeCategoria.nombre]} <span ng-if="activeCategoria.nombre"> -> </span> {[controller.product.nombre]}</h4>	
+		</div>
+
+		<div class="row headerRow">
+			<div class="col-sm-4">
+				<img
+					ez-plus 
+				    ezp-model="{thumb:'http://localhost/'+controller.activeImg, small:'http://localhost/'+controller.activeImg, large:'http://localhost/'+controller.activeImg }"
+				    ezp-options="{scrollZoom: true, easing: true}"
+				     id="zoom_01"  ng-src="http://localhost/{[controller.activeImg || '/storagee/public/galery/defaultP.jpg']}" class="img img-responsive">
+				<div class="row">
+					<div class="col-sm-4" ng-repeat="img in controller.product.galery">
+						<img ng-src="http://localhost/{[img]}" class="img img-responsive" ng-click="controller.setImg(img)">
+
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-8 nameCol">
+				<div class="row nombreRow">
+					<h2>
+						{[controller.product.nombre]}
+					</h2>
+
+				</div>
+				<div class="row idRow">
+					<div class="col-sm-4 col-sm-offset-8">
+						Producto #: <span class="id">{[controller.product.id]}</span>
+					</div>
+				</div>
+				<div class="row otrosRow">
+					<div class="col-sm-12">
+						Otros nombres:
+					</div>
+					<div class="col-sm-12">
+						<div class="col-sm-2 tagCol" ng-repeat="tag in controller.product.tags">
+						{[tag]} |
+
+						</div>
+					</div>
+				</div>
+				<div class="row priceRow">
+					<div class="col-sm-5">
+						Precio: <span class="price">{[controller.product.precio | currency:"$ ":0]}</span>
+					</div>
+					<div class="col-sm-7">
+						<ngcart-addtocart id="{[ controller.product.id ]}" name="{[ controller.product.nombre ]}" price="{[ controller.product.precio ]}" quantity="1" quantity-max="30" >Agregar al carro <i class="glyphicon glyphicon-shopping-cart"></i></ngcart-addtocart>
+
+					</div>
+				</div>
+				
+
+			</div>
+			
+		</div>
+
+		<div class="row fichaRow">
+			<ul class="nav nav-tabs" role="tablist">
+			    <li role="presentation" ng-class="{active: tab == 0 || !tab}"><a ng-click="tab = 0" aria-controls="Ficha Técnica" role="tab" >Ficha Técnica</a></li>
+			    <li role="presentation" ng-class="{active: tab == 1}" ng-if="controller.product.pdf"><a ng-click="tab = 1" aria-controls="Informe Completo" role="tab">Informe Completo</a></li>
+			    
+			  </ul>
+
+			<div class="col-sm-12">
+				<div class="tab-content">
+				    <div role="tabpanel" class="tab-pane" ng-class="{active: tab == 0 || !tab}" ng-bind-html="controller.product.descripcion">
+				    	
+				    </div>
+				    <div role="tabpanel" class="tab-pane" ng-class="{active: tab == 1}">
+					    <div class="col-sm-7 col-sm-offset-1">
+							<object width="600" height="500" ng-attr-data="http://localhost/{[controller.product.pdf]}">
+							</object>
+						
+						</div>
+				    	
+				    </div>
+				  </div>
+			
+			</div>
+			
+
+		</div>
+		<div class="row">
+
+			<!---->
+			
+
+		</div>
+	</div>
+</div>

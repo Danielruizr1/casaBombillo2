@@ -1,0 +1,38 @@
+<div class="col-sm-12">
+	<div class="row">
+		<div class="col-sm-3">
+			<a href="/#/defaultt">Voler</a>
+		</div>
+		<div class="col-sm-3">
+			<a href="/#/perfil">Perfil</a>
+		</div>
+		<div class="col-sm-3">
+			<a href="/#/pedidos">Pedidos</a>
+		</div>
+		<div class="col-sm-3">
+			<a href="/#/cotizaciones">Cotizaciones</a>
+		</div>
+
+
+	</div>
+	<div class="row" ng-form="perfilForm">
+		<div class="col-sm-6">
+			<rz-input type="text" name="name" id="name" label="Nombre" 
+			ng-model="controller.perfil.name" ng-required="true" error="perfilForm.name.$error.required" ></rz-input>
+		</div>
+		<div class="col-sm-6">
+			<rz-input type="text" name="telefono" id="telefono" label="Telefono" 
+			ng-model="controller.perfil.telefono" ng-required="true" error="perfilForm.telefono.$error.required" ></rz-input>
+		</div>
+		<div class="col-sm-6">
+			<rz-input type="text" name="direccion" id="direccion" label="Dirección" 
+			ng-model="controller.perfil.direccion" ng-required="true" error="perfilForm.direccion.$error.required" ></rz-input>
+		</div>		
+	</div>
+
+
+
+
+
+
+</div>

@@ -16,7 +16,7 @@ const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 gulp.task('scripts-concat', function(){
-  gulp.src(['app/scripts/main.js','app/scripts/*.js'])
+  gulp.src(['app/scripts/main.js','app/scripts/*.js', 'app/scripts/controllers/*.js'])
     .pipe(concat('main.js'))
     .pipe(gulp.dest('app/scripts/final'));
 });
@@ -120,10 +120,12 @@ gulp.task('clean', function (done) {
   del(['build'], done);
 });
 
-gulp.task('serve', ['styles','scripts-concat','scripts-compress', 'scripts', 'wiredep'], () => {
+gulp.task('serve', ['styles','scripts-concat','scripts-compress', 'scripts', 'wiredep'],   () => {
   browserSync({
     notify: false,
     port: 9000,
+    host: "127.0.0.1",
+    open: "external",
     server: {
       baseDir: ['app'],
       routes: {

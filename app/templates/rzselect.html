@@ -1,0 +1,16 @@
+<div class="rzMainContainer">
+    <div class="rzLabelContainer">&nbsp;</div>
+    <div class="form-group rzInputContainer" ng-class="{'focus': focus == true, 'highlight': ngModel || '{{float}}' == 'true' }">
+		<label class="rzLabel" for="tipo">{{label}}</label>
+	    <select  class="form-control rzInput" id="{{id}}" name="{{name}}" ng-model="ngModel" ng-required="{{ngRequired}}" ng-focus="focus = true" ng-blur="focus = false; show = true;" >
+	    	<option></option>
+	    	<option ng-repeat="option in options" value="{{option.id}}">{{option.nombre}}</option>
+	    </select>
+    </div>
+    <div class="rzLineContainer">
+	    <div class="rzInputLine"></div>
+	    <div class="rzInputLineFocus" ng-class="{'focus': focus == true}"></div>
+    </div>
+    <span class="errorSpan" ng-if="error && show">
+       Campo requerido!</span>
+</div>

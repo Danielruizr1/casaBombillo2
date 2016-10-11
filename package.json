@@ -72,6 +72,7 @@
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.13.4",
+    "mailgun-js": "^0.7.12",
     "nodemailer": "^2.5.0"
   }
 }

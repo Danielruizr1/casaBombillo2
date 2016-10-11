@@ -1,0 +1,64 @@
+<div class="col-sm-12">
+	<div class="row">
+		<rz-search type="text" name="name" id="name" label="Nombre" 
+				ng-model="controller.query" ng-required="false"  search="productos" clickfunc="controller.addItem" ></rz-search>
+	</div>
+	<div class="row">
+		<table class="table table-striped" id="cotiTable">
+			<thead>
+				<tr>
+					<th>
+						Nombre
+					</th>
+					<th>
+						Descripción
+					</th>
+					<th>
+						Precio
+					</th>
+					<th>
+						Cantidad
+					</th>
+				</tr>
+				
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in controller.items">
+					<td>
+						{[item.nombre]}						
+					</td>
+					<td ng-bind-html="item.descripcion">
+							
+					</td>
+					<td>
+						{[item.precio | currency:"COP ":0]}	
+					</td>
+					<td>
+						<input ng-model="item.cantidad" ng-change="controller.newCantidad(item)">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						 <strong> Total: {[controller.total | currency:"COP ":0]}</strong>
+					</td>
+				</tr>
+				
+			</tbody>
+	  
+		</table>
+	</div>
+
+	<div class="row">
+	<div class="col-sm-4 col-sm-offset-6">
+			<input ng-model="controller.email" placeholder="Correo@gmail.com"><button class="btn btn-default" ng-click="controller.sendPDF()">Enviar</button>
+		</div>
+		<div class="col-sm-2 ">
+			<button class="btn btn-default" ng-click="controller.downloadPDF()">Descargar</button>
+		</div>
+
+		
+	</div>
+
+	
+
+</div>

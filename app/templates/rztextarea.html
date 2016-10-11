@@ -1,0 +1,16 @@
+<div class="rzMainContainer">
+    <div class="rzLabelContainer">&nbsp;</div>
+    <div class="form-group rzInputContainer" ng-class="{'focus': focus == true, 'highlight': ngModel}">
+	    <label class="rzLabel" for="email" >{{label}}</label>
+	    <textarea class="form-control rzInput" id="{{id}}" name="{{name}}" ng-required="{{ngRequired}}" ng-model="ngModel" maxlength="{{maxlength}}" rows="{{rows}}" ng-focus="focus = true" ng-blur="focus = false; show = true;"></textarea>
+    </div>
+    <div class="rzLineContainer">
+	    <div class="rzInputLine"></div>
+	    <div ng-class="{'focus': focus == true}" class="rzInputLineFocus"></div>
+    </div>
+    <span class="errorSpan" ng-if="error && show">
+       Campo requerido!</span>
+
+
+</div>
+

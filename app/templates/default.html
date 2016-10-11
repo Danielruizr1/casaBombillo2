@@ -1,0 +1,38 @@
+<div class="jumbotron main">
+        <div class="container">
+         
+        </div>
+      </div>
+    <div class="container-fluid">
+      <h2>{[activeCategoria.nombre]}</h2>
+
+      <div class="col-sm-9" >
+        <product ng-click="controller.viewProduct(producto)" product="producto"  ng-repeat="producto in productos |filter:{categoria:activeCategoria.id}" ></product>
+      
+        
+      </div>
+
+      <div class="col-sm-3">
+        <div class="row padTop"> 
+          <div class="col-sm-12 sideHolder">
+            <a href="/#/coti">
+              <img class="sideImgs" src="http://res.cloudinary.com/ruizoft/image/upload/v1470702790/casaBombillo/banner_cotizador.jpg">
+            </a>
+          </div>
+        </div>
+
+        <div class="row padTop">
+          <div class="col-sm-12 sideHolder">
+            <img class="sideImgs" src="http://res.cloudinary.com/ruizoft/image/upload/v1470702789/casaBombillo/boton_asesoria.jpg">
+          </div>
+          <div class="col-sm-12 sideHolder">
+            <img class="sideImgs" src="http://res.cloudinary.com/ruizoft/image/upload/v1470702789/casaBombillo/boton_catalogo.jpg">
+          </div>
+          <div class="col-sm-12 sideHolder">
+            <img class="sideImgs" src="http://res.cloudinary.com/ruizoft/image/upload/v1470702789/casaBombillo/boton_certificados.jpg">
+          </div>
+        </div>
+
+      </div>
+      
+    </div>

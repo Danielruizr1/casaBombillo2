@@ -1,0 +1,36 @@
+<div class="rzMainContainer">
+    <div class="rzLabelContainer">&nbsp;</div>
+    <div class="form-group rzInputContainer" ng-class="{'focus': focus == true, 'highlight': ngModel || '{{float}}' == 'true' }">
+        <div class="input-group">
+    	    <label class="rzLabel" for="email" >{{label}}</label>
+    	    <input  type="{{type}}" class="form-control rzInput" id="{{id}}" name="{{name}}" ng-required="{{ngRequired}}" ng-model="ngModel"  ng-focus="focus = true" ng-blur="focus = false; show = true;" form="{[form]}">
+        </div>
+    </div>
+    <div class="rzLineContainer">
+	    <div class="rzInputLine"></div>
+	    <div ng-class="{'focus': focus == true}" class="rzInputLineFocus"></div>
+    </div>
+    <span class="errorSpan" ng-if="error && show">
+       Campo requerido!</span>
+
+       <div class="searchable" ng-class="{show:ngModel}">
+            <div class="row" ng-click="add(item)" ng-repeat="item in search | filter:ngModel | limitTo:10">
+                <div class="col-sm-4">
+                    {[item.nombre]}
+                </div>
+                <div class="col-sm-4" ng-bind-html="item.descripcion">
+                    
+                </div>
+                <div class="col-sm-4">
+                    {[item.precio | currency:"COP ":0]}
+                </div>
+                
+
+                
+            </div>
+                
+            
+        </div>
+
+
+</div>
